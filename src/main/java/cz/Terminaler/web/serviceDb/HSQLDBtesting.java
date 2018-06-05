@@ -1,12 +1,10 @@
 package cz.Terminaler.web.serviceDb;
 
 import javax.sql.DataSource;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.*;
 import com.zaxxer.hikari.HikariDataSource;
 import cz.Terminaler.web.entity.*;
 import lombok.SneakyThrows;
@@ -66,11 +64,10 @@ public class HSQLDBtesting {
         commandServiceDb.readAll().forEach(System.out::println);
 
 // ČTENÍ VLOŽENÉHO OBJEKTU PODLE ID
-//        System.out.println(commandServiceDb.read(0).toString());
+        System.out.println(commandServiceDb.read(0).toString());
 
 // SMAZÁNÍ OBJEKTU PODLE ID
-//        commandServiceDb.delete(0);
-//        commandServiceDb.readAll().forEach(System.out::println);
-
+        commandServiceDb.delete(0);
+        commandServiceDb.readAll().forEach(System.out::println);
     }
 }
