@@ -12,7 +12,7 @@ public enum CommandsLinux {
 
     CREATEFOLDER("mkdir"),
     DELETEFOLDER("rmdir"),
-    PING("ping");
+    PING("ping -c 3");
 
     private String value;
     
